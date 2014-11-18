@@ -100,7 +100,15 @@ viewMod.directive('productList', function($resource) {
       template: '<li ng-repeat="product in products">{{product.name}} {{product.price}}</li>',
       link: function(scope, element, attrs) {
         var Product = $resource('/products');
-        scope.products = Product.query({type: scope.params.type}, function() { });
+        var type = scope.params.type;
+        var noop = function() {};
+
+        if (type) {
+          scope.products = Product.query({type: scope.params.type || ''}, noop);
+        } else {
+          scope.products = Product.query(noop);
+        }
+        
       }
     }
   });

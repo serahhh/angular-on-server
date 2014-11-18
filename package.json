@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "dependencies": {
     "express": "",
+    "jsdom": "^1.2.2",
+    "lodash": "^2.4.1",
+    "q": "^1.1.1",
     "rethinkdb": ""
   }
-
 }

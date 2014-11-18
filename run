@@ -1,9 +1,2 @@
 #!/bin/bash
-npm install
-cd jsdom-with-xmlhttprequest
-npm install
-cd ..
-cd xmlhttprequest
-npm install
-cd ..
-coffee angularonserver
+coffee angularonserver.coffee
